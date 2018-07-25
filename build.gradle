@@ -31,3 +31,28 @@ dependencies {
 	compile('org.flywaydb:flyway-core')
 	testCompile('org.springframework.boot:spring-boot-starter-test')
 }
+
+buildscript {
+
+	dependencies {
+
+		classpath('se.transmode.gradle:gradle-docker:1.2')
+	}
+}
+
+group = 'springio'
+
+
+apply plugin: 'docker'
+
+task buildDocker(type: Docker, dependsOn: build) {
+	push = true
+	applicationName = jar.baseName
+	dockerfile = file('src/main/docker/Dockerfile')
+	doFirst {
+		copy {
+			from jar
+			into stageDir
+		}
+	}
+}
