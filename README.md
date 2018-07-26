@@ -32,3 +32,37 @@ task buildDocker(type: Docker, dependsOn: build) {
 	}
 }
 ```
+
+Getting an Image to DockerHub 
+
+1.Log in on https://hub.docker.com/
+
+2.Click on Create Repository
+
+3.Choose a name to describe 
+
+4.Log into the Docker Hub from the command line
+
+```dockerfile
+docker login --username
+password: 
+```
+
+5. Check the image 
+
+```dockerfile
+docker images
+```
+
+6.Create a tag your iamge 
+
+```dockerfile
+docker tag {image Id} username/imageName:{firstimage}
+```
+7 push docker image to repository 
+
+```dockerfile
+docker push usernam/imageName
+```
+
+ 
