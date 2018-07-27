@@ -65,4 +65,12 @@ docker tag {image Id} username/imageName:{firstimage}
 docker push usernam/imageName
 ```
 
+#RabbitMQ
+
+step1: install rabbitmq 
+```sbtshell
+brew install rabbitmq
+```
+
+
  
