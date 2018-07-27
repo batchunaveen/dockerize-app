@@ -67,10 +67,15 @@ docker push usernam/imageName
 
 #RabbitMQ
 
-step1: install rabbitmq 
-```sbtshell
+step1: install rabbitmq  using homebrew 
+
+```commandline
 brew install rabbitmq
 ```
 
-
+step2: to start rabbitmq 
+```commandline
+brew services start rabbitmq
+```
+look at the localhost mentioned in 
  
